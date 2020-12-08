@@ -1,4 +1,3 @@
-
 const { v4: uuidV4 }  = require('uuid');
 
 class Band {
