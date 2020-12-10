@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
     res.send("Node Server is running. Yay!!")
 })
 
-const socketio = require('socket.io')(http)
+const socketio = require('socket.io')(server)
 
 socketio.on("connection", (userSocket) => {
     // userSocket.on("send_message", (data) => {
