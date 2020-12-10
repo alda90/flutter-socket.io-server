@@ -16,6 +16,7 @@ io.on('connection', client => {
 
     console.log('cliente conectado');
   client.emit('active-bands', bands.getBands());
+  
 
   client.on('disconnect', () => { 
       console.log('cliente desconectado');
