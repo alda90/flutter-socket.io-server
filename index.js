@@ -24,6 +24,10 @@ const server = require('http').createServer(app);
 // const publicPath = path.resolve( __dirname, 'public');
 // app.use(express.static(publicPath));
 
+app.get('/', (req, res) => {
+    res.send("Node Server is running. Yay!!")
+})
+
 const socketio = require('socket.io')(http)
 
 socketio.on("connection", (userSocket) => {
@@ -34,8 +38,6 @@ socketio.on("connection", (userSocket) => {
     userSocket.emit('active-bands', bands.getBands())
 })
 
-app.get('/', (req, res) => {
-    res.send("Node Server is running. Yay!!")
-})
+
 
 server.listen(process.env.PORT);
