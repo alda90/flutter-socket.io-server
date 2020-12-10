@@ -4,7 +4,7 @@ const Band = require('./models/band')
 const Bands = require('./models/bands')
 
 
-//const path = require('path');
+const path = require('path');
 //require('dotenv').config();
 
 
@@ -25,12 +25,12 @@ bands.addBand(new Band('The Cure'));
 //module.exports.io = require('socket.io')(server);
 //require('./sockets/socket')
 /// Path Publico
-// const publicPath = path.resolve( __dirname, 'public');
-// app.use(express.static(publicPath));
+const publicPath = path.resolve( __dirname, 'public');
+app.use(express.static(publicPath));
 
-app.get('/', (req, res) => {
-    res.send("Node Server is running. Yay!!")
-})
+// app.get('/', (req, res) => {
+//     res.send("Node Server is running. Yay!!")
+// })
 
 const socketio = require('socket.io')(server)
 
