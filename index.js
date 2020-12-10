@@ -1,5 +1,6 @@
-const express = require('express');
-const path = require('path');
+const app = require('express')()
+const server = require('http').createServer(app)
+//const path = require('path');
 //require('dotenv').config();
 const Band = require('./models/band')
 const Bands = require('./models/bands')
@@ -11,11 +12,11 @@ bands.addBand(new Band('The Clash'));
 bands.addBand(new Band('The Cure'));
 
 // App de Express
-const app = express();
+//const app = express();
 
 
 // Node Server
-const server = require('http').createServer(app);
+
 
 
 //module.exports.io = require('socket.io')(server);
