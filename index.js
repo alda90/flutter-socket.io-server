@@ -4,6 +4,12 @@ const path = require('path');
 const Band = require('./models/band')
 const Bands = require('./models/bands')
 
+const bands = new Bands();
+bands.addBand(new Band('Queen'));
+bands.addBand(new Band('Heróes del Silencio'));
+bands.addBand(new Band('The Clash'));
+bands.addBand(new Band('The Cure'));
+
 // App de Express
 const app = express();
 
