@@ -10,7 +10,6 @@ bands.addBand(new Band('The Clash'));
 bands.addBand(new Band('The Cure'));
 
 
-
 app.get('/', (req, res) => {
     res.send("Node Server is running. Yay!!")
 })
