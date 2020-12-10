@@ -19,11 +19,11 @@ app.get('/', (req, res) => {
 const socketio = require('socket.io')(http)
 
 socketio.on("connection", (userSocket) => {
-    userSocket.on("send_message", (data) => {
-        userSocket.broadcast.emit("receive_message", data)
-    })
+    // userSocket.on("send_message", (data) => {
+    //     userSocket.broadcast.emit("receive_message", data)
+    // })
 
-    userSocket.emit('active-bands', bands.getBands())
+    // userSocket.emit('active-bands', bands.getBands())
 })
 
 http.listen(process.env.PORT)
