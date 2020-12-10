@@ -1,6 +1,8 @@
 const express = require('express');
 const path = require('path');
 //require('dotenv').config();
+const Band = require('./models/band')
+const Bands = require('./models/bands')
 
 // App de Express
 const app = express();
@@ -23,7 +25,7 @@ socketio.on("connection", (userSocket) => {
     //     userSocket.broadcast.emit("receive_message", data)
     // })
 
-    // userSocket.emit('active-bands', bands.getBands())
+    userSocket.emit('active-bands', bands.getBands())
 })
 
 app.get('/', (req, res) => {
