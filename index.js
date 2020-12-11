@@ -13,8 +13,8 @@ const path = require('path')
 
 
 
-//module.exports.io = require('socket.io')(server);
-//require('./sockets/socket')
+module.exports.io = require('socket.io')(server);
+require('./sockets/socket')
 /// Path Publico
 const publicPath = path.resolve( __dirname, 'public');
 app.use(express.static(publicPath));
@@ -23,15 +23,15 @@ app.use(express.static(publicPath));
 //     res.send("Node Server is running. Yay!!")
 // })
 
-const socketio = require('socket.io')(server)
+// const socketio = require('socket.io')(server)
 
-socketio.on("connection", (userSocket) => {
-    // userSocket.on("send_message", (data) => {
-    //     userSocket.broadcast.emit("receive_message", data)
-    // })
+// socketio.on("connection", (userSocket) => {
+//     // userSocket.on("send_message", (data) => {
+//     //     userSocket.broadcast.emit("receive_message", data)
+//     // })
 
-    userSocket.emit('active-bands', bands.getBands())
-})
+//     userSocket.emit('active-bands', bands.getBands())
+// })
 
 
 
