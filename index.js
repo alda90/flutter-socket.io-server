@@ -1,18 +1,10 @@
 const app = require('express')()
 const server = require('http').createServer(app)
-const Band = require('./models/band')
-const Bands = require('./models/bands')
+
 
 
 const path = require('path');
 //require('dotenv').config();
-
-
-const bands = new Bands();
-bands.addBand(new Band('Queen'));
-bands.addBand(new Band('Heróes del Silencio'));
-bands.addBand(new Band('The Clash'));
-bands.addBand(new Band('The Cure'));
 
 // App de Express
 //const app = express();
