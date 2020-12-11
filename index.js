@@ -2,8 +2,6 @@ const app = require('express')()
 const server = require('http').createServer(app)
 const path = require('path')
 
-
-const path = require('path');
 //require('dotenv').config();
 
 // App de Express
